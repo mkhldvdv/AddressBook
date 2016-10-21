@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: AddressBook
+  datasource:
+    url: 'jdbc:postgresql://localhost:5432/addressbook'
+    username: addressbook
+    password: addressbookadmin
+server:
+  context-path: /addressbook
+flyway:
+  clean-on-validation-error: true
+  
