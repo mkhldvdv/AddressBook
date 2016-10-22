@@ -13,5 +13,5 @@ import lombok.Data;
 public class Cities {
   private Long id;
   private String name;
-  private Long country_id;
+  private Long country;
 }

@@ -14,6 +14,6 @@ public class Rooms {
   private Long id;
   private String name;
   private String description;
-  private Long stage_id;
-  private Long plan_id;
+  private Long stage;
+  private Long plan;
 }

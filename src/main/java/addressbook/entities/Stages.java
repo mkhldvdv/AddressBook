@@ -14,6 +14,6 @@ public class Stages {
   private Long id;
   private Long number;
   private String description;
-  private Long building_id;
-  private Long plan_id;
+  private Long building;
+  private Long plan;
 }

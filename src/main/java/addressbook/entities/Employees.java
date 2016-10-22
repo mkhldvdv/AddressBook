@@ -9,21 +9,22 @@ package addressbook.entities;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class Employees {
   private Long id;
   private String firstname;
   private String lastname;
-  private java.sql.Date birthdate;
+  private Date birthdate;
   private String email;
   private String username;
   private String password;
   private String phone;
   private String extphone;
-  private java.sql.Date startdate;
-  private java.sql.Date enddate;
-  private Long role_id;
-  private Long department_id;
-  private Long employee_id;
-  private Long position_id;
+  private Date startdate;
+  private Date enddate;
+  private Long department;
+  private Long employee;
+  private Long position;
 }

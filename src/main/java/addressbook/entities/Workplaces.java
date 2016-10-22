@@ -12,6 +12,6 @@ import lombok.Data;
 @Data
 public class Workplaces {
   private Long id;
-  private Long room_id;
-  private Long employee_id;
+  private Long room;
+  private Long employee;
 }

@@ -13,5 +13,5 @@ import lombok.Data;
 public class Departments {
   private Long id;
   private String name;
-  private Long department_id;
+  private Long department;
 }

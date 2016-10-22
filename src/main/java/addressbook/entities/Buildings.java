@@ -18,6 +18,6 @@ public class Buildings {
     private Long id;
     private String name;
     private String description;
-    private Long city_id;
-    private Long plan_id;
+    private Long city;
+    private Long plan;
 }
