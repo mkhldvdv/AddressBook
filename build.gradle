@@ -40,3 +40,7 @@ dependencies {
 	runtime('org.postgresql:postgresql')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+plugins {
+    id "org.flywaydb.flyway" version "4.0.3"
+}
