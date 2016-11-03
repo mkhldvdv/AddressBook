@@ -9,9 +9,17 @@ package addressbook.entities;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
+/**
+ * Created by mikhail.davydov on 21.10.2016.
+ */
+
 @Data
-public class Cities {
-  private Long id;
-  private String name;
-  private Long country;
+public class Building implements Serializable {
+    private Long id;
+    private String name;
+    private String description;
+    private Long city;
+    private Long plan;
 }

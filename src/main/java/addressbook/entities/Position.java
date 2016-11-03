@@ -9,11 +9,10 @@ package addressbook.entities;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Stages {
+public class Position implements Serializable {
   private Long id;
-  private Long number;
-  private String description;
-  private Long building;
-  private Long plan;
+  private String name;
 }

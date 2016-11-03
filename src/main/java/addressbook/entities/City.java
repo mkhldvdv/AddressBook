@@ -9,8 +9,11 @@ package addressbook.entities;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Countries {
+public class City implements Serializable {
   private Long id;
   private String name;
+  private Long country;
 }

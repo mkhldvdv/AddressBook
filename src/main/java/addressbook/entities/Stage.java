@@ -9,11 +9,13 @@ package addressbook.entities;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Rooms {
+public class Stage implements Serializable {
   private Long id;
-  private String name;
+  private Long number;
   private String description;
-  private Long stage;
+  private Long building;
   private Long plan;
 }

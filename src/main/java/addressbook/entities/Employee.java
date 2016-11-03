@@ -9,10 +9,11 @@ package addressbook.entities;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class Employees {
+public class Employee implements Serializable {
   private Long id;
   private String firstname;
   private String lastname;

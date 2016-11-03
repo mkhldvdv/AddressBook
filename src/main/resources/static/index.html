@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+  ~  Copyright (c) 2016 Mikhail Davydov <mkhldvdv@gmail.com> - All Rights Reserved
+  ~
+  ~  Unauthorized copying of this file, via any medium is strictly prohibited
+  ~  Proprietary and confidential
+  -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Address Book</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    some text here
+</body>
+
+<script>
+
+    $(document).ready(getCountry());
+
+    function getCountry () {
+        $.getJSON("country", function(json) {
+            console.log( "JSON Data: " + json.name );
+            alertMessage(json);
+        });
+    }
+
+    function alertMessage (country) {
+        alert("JSON Data: " + country.name);
+    }
+
+</script>
+
+</html>

@@ -7,6 +7,7 @@
 
 package addressbook.controllers;
 
+import addressbook.entities.Country;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,8 +19,12 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class AddressBookController {
 
-    @RequestMapping("/")
-    public String hello() {
-        return "hello AddressBook";
+    @RequestMapping("/country")
+    public Country getCountry() {
+        log.info("in addressbook.controllers.AddressBookController.getCountry");
+        Country country = new Country();
+        country.setId(1L);
+        country.setName("Russia");
+        return country;
     }
 }
