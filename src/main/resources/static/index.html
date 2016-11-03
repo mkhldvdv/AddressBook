@@ -13,12 +13,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-    some text here
+    <div>some text here</div>
+    <div>
+        <button type="button" onclick="getCountry()">Get Country!</button>
+    </div>
+    <div id="country">USA</div>
 </body>
 
 <script>
 
-    $(document).ready(getCountry());
+//    $(document).ready(getCountry());
 
     function getCountry () {
         $.getJSON("country", function(json) {
@@ -28,7 +32,8 @@
     }
 
     function alertMessage (country) {
-        alert("JSON Data: " + country.name);
+//        alert("JSON Data: " + country.name);
+        $("#country").text("JSON Data: " + country.name);
     }
 
 </script>
