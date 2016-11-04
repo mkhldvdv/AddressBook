@@ -11,9 +11,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by mikhail.davydov on 21.10.2016.
+ * Created by mikhail.davydov on 04.11.2016.
  */
 @RestController
 @Slf4j
-public class AddressBookController {
+public class WorkplaceController {
 }

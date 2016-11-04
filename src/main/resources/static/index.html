@@ -25,15 +25,16 @@
 //    $(document).ready(getCountry());
 
     function getCountry () {
-        $.getJSON("country", function(json) {
-            console.log( "JSON Data: " + json.name );
+        var country = 1;
+        var url = "country/" + country;
+        $.getJSON(url, function(json) {
+            console.log("JSON Data: " + json.name);
             alertMessage(json);
         });
     }
 
     function alertMessage (country) {
-//        alert("JSON Data: " + country.name);
-        $("#country").text("JSON Data: " + country.name);
+        $("#country").text(country.name);
     }
 
 </script>

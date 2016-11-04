@@ -5,15 +5,17 @@
  *  Proprietary and confidential
  */
 
-package addressbook.controllers;
+package addressbook.services;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Created by mikhail.davydov on 21.10.2016.
+ * Created by mikhail.davydov on 04.11.2016.
  */
-@RestController
+@Service
 @Slf4j
-public class AddressBookController {
+@Transactional(readOnly = true)
+public class StageService {
 }

@@ -16,14 +16,14 @@ CREATE TABLE IF NOT EXISTS employees
   department_id INTEGER,
   employee_id   INTEGER,
   position_id   INTEGER,
-  enabled BOOLEAN,
+  enabled       BOOLEAN,
   PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS roles
 (
-  id      SERIAL NOT NULL,
-  role    TEXT,
+  id   SERIAL NOT NULL,
+  role TEXT,
   PRIMARY KEY (id)
 );
 
@@ -187,3 +187,4 @@ CREATE INDEX ON stages (plan_id);
 CREATE INDEX ON rooms (stage_id);
 CREATE INDEX ON rooms (plan_id);
 
+INSERT INTO countries (id, name) VALUES (1, 'Russia');
