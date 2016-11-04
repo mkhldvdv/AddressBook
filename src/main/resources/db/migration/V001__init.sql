@@ -1,7 +1,7 @@
 -- Create tables
 CREATE TABLE IF NOT EXISTS employees
 (
-  id            INTEGER NOT NULL,
+  id            SERIAL NOT NULL,
   firstname     TEXT,
   lastname      TEXT,
   birthdate     DATE,
@@ -16,20 +16,20 @@ CREATE TABLE IF NOT EXISTS employees
   department_id INTEGER,
   employee_id   INTEGER,
   position_id   INTEGER,
+  enabled BOOLEAN,
   PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS roles
 (
-  id      INTEGER NOT NULL,
-  name    TEXT,
-  enabled BOOLEAN,
+  id      SERIAL NOT NULL,
+  role    TEXT,
   PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS departments
 (
-  id            INTEGER NOT NULL,
+  id            SERIAL NOT NULL,
   name          TEXT,
   department_id INTEGER,
   PRIMARY KEY (id)
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS departments
 
 CREATE TABLE IF NOT EXISTS cities
 (
-  id         INTEGER NOT NULL,
+  id         SERIAL NOT NULL,
   name       TEXT,
   country_id INTEGER,
   PRIMARY KEY (id)
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS cities
 
 CREATE TABLE IF NOT EXISTS buildings
 (
-  id          INTEGER NOT NULL,
+  id          SERIAL NOT NULL,
   name        TEXT,
   description TEXT,
   city_id     INTEGER,
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS buildings
 
 CREATE TABLE IF NOT EXISTS stages
 (
-  id          INTEGER NOT NULL,
+  id          SERIAL NOT NULL,
   number      INTEGER,
   description TEXT,
   building_id INTEGER,
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS stages
 
 CREATE TABLE IF NOT EXISTS rooms
 (
-  id          INTEGER NOT NULL,
+  id          SERIAL NOT NULL,
   name        TEXT,
   description TEXT,
   stage_id    INTEGER,
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS rooms
 
 CREATE TABLE IF NOT EXISTS workplaces
 (
-  id          INTEGER NOT NULL,
+  id          SERIAL NOT NULL,
   room_id     INTEGER,
   employee_id INTEGER UNIQUE,
   PRIMARY KEY (id)
@@ -83,21 +83,21 @@ CREATE TABLE IF NOT EXISTS workplaces
 
 CREATE TABLE IF NOT EXISTS countries
 (
-  id   INTEGER NOT NULL,
+  id   SERIAL NOT NULL,
   name TEXT,
   PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS plans
 (
-  id   INTEGER NOT NULL,
+  id   SERIAL NOT NULL,
   code TEXT,
   PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS positions
 (
-  id   INTEGER NOT NULL,
+  id   SERIAL NOT NULL,
   name TEXT,
   PRIMARY KEY (id)
 );
