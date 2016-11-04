@@ -7,11 +7,9 @@
 
 package addressbook.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -23,12 +21,11 @@ import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
-import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_EMPTY;
 
 @Data
 @Entity
-@JsonInclude(NON_NULL)
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@JsonInclude(NON_EMPTY)
 @Table(name = "[employees]")
 public class Employee implements Serializable {
     @Id
