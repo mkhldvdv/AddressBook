@@ -7,6 +7,12 @@ spring:
     password: addressbookadmin
 server:
   context-path: /addressbook
+  port: 443
+  ssl:
+    key-store: keystore.p12
+    key-store-password: addressbook
+    key-store-type: PKCS12
+    key-alias: addressbook
+
 flyway:
   clean-on-validation-error: true
-  
