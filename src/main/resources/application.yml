@@ -7,7 +7,7 @@ spring:
     password: addressbookadmin
 server:
   context-path: /addressbook
-  port: 443
+  port: 8443
   ssl:
     key-store: keystore.p12
     key-store-password: addressbook
